@@ -2,7 +2,7 @@ version: '3'
 
 services:
   server:
-    image: instantbox/instantbox:latest
+    image: mexious/vm_image:latest
     container_name: instantbox_server
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -12,7 +12,7 @@ services:
       - instantbox_net
 
   frontend:
-    image: instantbox/instantbox-frontend:latest
+    image: mexious/vm_image-frontend:latest
     container_name: instantbox_frontend
     links:
       - server
