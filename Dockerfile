@@ -12,9 +12,9 @@ FROM gcr.io/distroless/python3
 
 LABEL \
   org.label-schema.schema-version="1.0" \
-  org.label-schema.name="instantbox" \
-  org.label-schema.vcs-url="https://github.com/instantbox/instantbox" \
-  maintainer="Instantbox Team <team@instantbox.org>"
+  org.label-schema.name="vm_image" \
+  org.label-schema.vcs-url="https://github.com/mexious/vm_image" \
+  maintainer="Developer Mexious <care@mexious.com>"
 
 ENV SERVERURL ""
 
