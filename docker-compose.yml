@@ -12,7 +12,7 @@ services:
       - mexiousvm_net
 
   frontend:
-    image: instantbox/instantbox-frontend:latest
+    image: mexious/vm_image-frontend:latest
     container_name: mexiousvm_frontend
     links:
       - server
