@@ -30,7 +30,7 @@ else
     chmod +x /usr/local/bin/docker-compose || exit 1
 fi
 
-curl -sSLO https://raw.githubusercontent.com/instantbox/instantbox/master/docker-compose.yml
+curl -sSLO https://raw.githubusercontent.com/mexious/vm_image/master/docker-compose.yml
 
 echo "Enter your IP (optional): "
 read IP
