@@ -17,7 +17,7 @@ services:
     links:
       - server
     ports:
-      - 8877:80
+      - 8888:80
     networks:
       - mexiousvm_net
 
