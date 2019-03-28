@@ -7,7 +7,7 @@ check_cmd() {
     command -v "$1" >/dev/null 2>&1
 }
 
-echo "Welcome to instantbox, please wait..."
+echo "Welcome to MexiouVM, please wait..."
 echo ""
 
 if check_cmd docker; then
@@ -28,11 +28,11 @@ curl -sSLO https://raw.githubusercontent.com/mexious/vm_image/master/docker-comp
 
 echo "Enter your IP (optional): "
 read IP
-echo "Choose a port (default: 8877): "
+echo "Choose a port (default: 8888): "
 read PORT
 
 [  -z "$IP" ] || sed -i -e "s/SERVERURL=$/SERVERURL=$IP/" docker-compose.yml
 [  -z "$PORT" ] || sed -i -e "s/8888:80/$PORT:80/" docker-compose.yml
 
 echo "You're all set! "
-echo "Run 'docker-compose up -d' then go to http://${IP:-localhost}:${PORT:-8877} on your browser."
+echo "Run 'docker-compose up -d' then go to http://${IP:-localhost}:${PORT:-8888} on your browser."
