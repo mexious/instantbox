@@ -1,8 +1,8 @@
-ersion: '3'
+version: '3'
 
 services:
   server:
-    image: instantbox/instantbox:latest
+    image: mexious/mexiousvm:latest
     container_name: mexiousvm_server
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
