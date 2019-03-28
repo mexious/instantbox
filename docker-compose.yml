@@ -1,35 +1,35 @@
-version: '3'
+ersion: '3'
 
 services:
   server:
     image: instantbox/instantbox:latest
-    container_name: instantbox_server
+    container_name: mexiousvm_server
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - SERVERURL=
     networks:
-      - instantbox_net
+      - mexiousvm_net
 
   frontend:
-    image: mexious/vm_image-frontend:latest
-    container_name: instantbox_frontend
+    image: instantbox/instantbox-frontend:latest
+    container_name: mexiousvm_frontend
     links:
       - server
     ports:
-      - 8888:80
+      - 8877:80
     networks:
-      - instantbox_net
+      - mexiousvm_net
 
   cron:
     image: xordiv/docker-alpine-cron
-    container_name: instantbox_cron
+    container_name: mexiousvm_cron
     links:
       - frontend
     environment:
       - CRON_STRINGS=* * * * * wget -qO /dev/null http://frontend/api/v2/superinspire/prune
     networks:
-      - instantbox_net
+      - mexiousvm_net
 
 networks:
-  instantbox_net:
+  mexiousvm_net:
