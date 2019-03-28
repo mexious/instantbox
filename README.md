@@ -53,8 +53,8 @@ We currently supports various versions of Ubuntu, CentOS, Arch Linux, Debian, Fe
 Prerequisite: docker [[More Information]](https://docs.docker.com/install/)
 
 ```bash
-mkdir instantbox && cd $_
-bash <(curl -sSL https://raw.githubusercontent.com/instantbox/instantbox/master/init.sh)
+mkdir vm_image && cd $_
+bash <(curl -sSL https://raw.githubusercontent.com/mexious/vm_image/master/init.sh)
 ```
 
 
