@@ -1,12 +1,6 @@
 #!/bin/sh
 #
-# Install script for instantbox
-# Home Page: https://github.com/instantbox/instantbox
-#
-# Usage:
-#  mkdir instantbox && cd $_
-#  bash <(curl -sSL https://raw.githubusercontent.com/instantbox/instantbox/master/init.sh)"
-#  docker-compose up -d
+# Recode By Mexious Media
 #
 
 check_cmd() {
@@ -34,11 +28,11 @@ curl -sSLO https://raw.githubusercontent.com/mexious/vm_image/master/docker-comp
 
 echo "Enter your IP (optional): "
 read IP
-echo "Choose a port (default: 8888): "
+echo "Choose a port (default: 8877): "
 read PORT
 
 [  -z "$IP" ] || sed -i -e "s/SERVERURL=$/SERVERURL=$IP/" docker-compose.yml
 [  -z "$PORT" ] || sed -i -e "s/8888:80/$PORT:80/" docker-compose.yml
 
 echo "You're all set! "
-echo "Run 'docker-compose up -d' then go to http://${IP:-localhost}:${PORT:-8888} on your browser."
+echo "Run 'docker-compose up -d' then go to http://${IP:-localhost}:${PORT:-8877} on your browser."
