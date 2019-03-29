@@ -22,7 +22,7 @@ class InstantboxManager(object):
         if self.OS_LIST is None:
             raise Exception(
                 'Could not load manifest.json. ' +
-                'Download it from https://get.instantbox.org/manifest.json'
+                'Download it from https://gist.githubusercontent.com/rifkytech/ced766832986cdeae86efcadc430e41e/raw/5bc1c28e304827ab82bd125814c5a482308192ea/manifest.json'
             )
 
         self.AVAILABLE_OS_LIST = []
