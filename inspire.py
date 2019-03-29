@@ -59,7 +59,7 @@ def rmOS():
         except Exception:
             response = Response(
                 json.dumps({
-                    'message': 'RM docker containers ERROR',
+                    'message': 'Unable to delete container',
                     'shareUrl': '',
                     'statusCode': 0,
                 }),
@@ -91,7 +91,7 @@ def getOS():
     except Exception:
         response = Response(
             json.dumps({
-                'message': 'The image is not supported at this time ERROR',
+                'message': 'Invalid Option, Unable create Image',
                 'statusCode': 0
             }),
             mimetype='application/json')
